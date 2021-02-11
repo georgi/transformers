@@ -26,5 +26,7 @@ WORKDIR /workspace
 COPY . transformers/
 RUN cd transformers/ && \
     python3 -m pip install --no-cache-dir .
+    
+RUN python3 -m pip install --no-cache-dir jupyter jupyterlab
 
 CMD ["/bin/bash"]
